@@ -4,12 +4,24 @@
 
 运行和分类不需要 QQ Agent、聊天模型或云端图片服务。默认只监听 `127.0.0.1:8766`。
 
+## 1.1 更新
+
+- 放大预览新增左右按钮、键盘切图和底部可横向滚动的缩略图队列，支持沿当前筛选与排序跨页切换。
+- 收录时间、文件大小、分辨率均支持正反两个方向排序。
+- 支持拖入图片与文件夹，递归读取子文件夹并保留相对路径。
+- 新增明确的多选入口、全选本页与批量移入回收站，跨页选择按批提交，失败项保留选择。
+- 支持输入页码跳转，批量删除后自动回到有效页码。
+
+安装器不会自动清理已有图库。图片、数据库、本机配置和清理记录不包含在发布包中。
+
+升级：下载新版 ZIP 后重新运行安装器，`-LibraryPath` 指向原图库即可复用数据；模型缓存可继续使用。旧网页服务正在运行时，先停止旧服务再启动新版。
+
 ## 安装
 
 Windows 10/11 x64，在 PowerShell 中运行：
 
 ```powershell
-irm https://raw.githubusercontent.com/QinYooo/danbooru-local-manager/v1.0.0/bootstrap.ps1 | iex
+irm https://raw.githubusercontent.com/QinYooo/danbooru-local-manager/v1.1.0/bootstrap.ps1 | iex
 ```
 
 也可以从 [Releases](https://github.com/QinYooo/danbooru-local-manager/releases) 下载 ZIP，解压后双击 `install.cmd`。
